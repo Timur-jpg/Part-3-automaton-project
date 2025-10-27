@@ -19,5 +19,10 @@ Answers
     Yes, those patterns deterministic.
     
 31- So that we can calculate the next generation of the automaton without changing the current one while we're still using.
+    It does make a difference because updating state directly mixes the old and new generations.
 
-32- 
+32- Yes, we can by keeping just the previous cell's old value in a temporary variable while updating the array.
+    Only one old cell 
+    Using a full new array is better because it's safer, simpler and easier to understand.
+    
+33- 
