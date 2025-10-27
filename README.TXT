@@ -25,4 +25,4 @@ Answers
     Only one old cell 
     Using a full new array is better because it's safer, simpler and easier to understand.
     
-33- 
+ 
