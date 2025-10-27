@@ -74,7 +74,8 @@ public class Automaton
     }
 
     public int calculateNextState(int left, int center, int right) {
-        return (left + right +center) %2;
+        return (left + right) % 2; 
+        
     }
 }
 
