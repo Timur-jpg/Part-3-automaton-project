@@ -25,4 +25,7 @@ Answers
     Only one old cell 
     Using a full new array is better because it's safer, simpler and easier to understand.
     
- 
+35- There is 256 different sets of unique rules (8 input combinations, 2 choices each = 2^8 = 256 unique rules).
+    No, with 3 binary inputs the number of rules is finite.
+
+36-    
