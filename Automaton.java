@@ -23,6 +23,9 @@ public class Automaton
         state = new int[numberOfCells];
         // Seed the automaton with a single 'on' cell in the middle.
         state[numberOfCells / 2] = 1;
+        
+        state = Arrays.copyOf(state, numberOfCells + 1);
+        state[numberOfCells] = 0;  
     }
     
     /**
@@ -47,14 +50,15 @@ public class Automaton
     public void update()
     {
     int [] nextState = new int [state.length];  
+    
     int left = 0;
     int center = state[0];
-    for (int i=0; i<state.length; i++){
-         int right = i + 1 < state.length ? state[i+1] : 0;
+    for (int i=0; i<numberOfCells; i++){
+         int right = state[i+1];
          nextState[i] = calculateNextState(left, center, right);
          left = center;
          center = right;
-     } 
+    }
     }
     
     /**
